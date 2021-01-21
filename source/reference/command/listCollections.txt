@@ -122,6 +122,10 @@ Definition
 Behavior
 --------
 
+Starting in MongoDB 5.0, :dbcommand:`listCollections` will raise an 
+error if passed an unrecognized parameter. In MongoDB 4.4 and earlier, 
+unrecognized parameters are silently ignored.
+
 Filter
 ~~~~~~
 
