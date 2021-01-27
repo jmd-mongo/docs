@@ -67,6 +67,13 @@ must have privileges to :authaction:`listIndexes`. The built-in role
 Behavior
 --------
 
+Argument Validation
+~~~~~~~~~~~~~~~~~~~
+
+Starting in MongoDB 5.0, :dbcommand:`listIndexes` will raise an 
+error if passed an unrecognized parameter. In MongoDB 4.4 and earlier, 
+unrecognized parameters are silently ignored.
+
 .. |operation| replace:: :dbcommand:`listIndexes`
 
 Client Disconnection
