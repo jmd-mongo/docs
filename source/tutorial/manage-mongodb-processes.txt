@@ -150,7 +150,8 @@ authentication enabled.
 Use ``--shutdown``
 ~~~~~~~~~~~~~~~~~~
 
-From the Linux command line, shut down the :binary:`~bin.mongod` using the
+Supported on the Linux command line only. From the Linux command line, 
+shut down the :binary:`~bin.mongod` using the 
 :option:`--shutdown <mongod --shutdown>` option in the following command:
 
 .. code-block:: sh
@@ -167,7 +168,8 @@ to perform a clean shutdown.
 Use ``kill``
 ~~~~~~~~~~~~
 
-From the Linux command line, shut down a specific :binary:`~bin.mongod` instance
+Supported on the Linux command line and the macOS command line. From the 
+command line, shut down a specific :binary:`~bin.mongod` instance 
 using one of the following commands:
 
 .. code-block:: none
