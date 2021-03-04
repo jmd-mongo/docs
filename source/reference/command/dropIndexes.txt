@@ -10,6 +10,9 @@ dropIndexes
    :depth: 1
    :class: singlecol
 
+Definition
+----------
+
 .. dbcommand:: dropIndexes
 
    The :dbcommand:`dropIndexes` command drops one or more indexes
@@ -69,6 +72,13 @@ dropIndexes
         - .. include:: /includes/extracts/comment-content.rst
        
           .. versionadded:: 4.4
+
+Parameter Validation
+--------------------
+
+Starting in MongoDB 5.0, :dbcommand:`dropIndexes` raises an error if 
+passed a parameter not explicitly accepted by the command. In MongoDB 
+4.4 and earlier, unrecognized parameters are silently ignored.
 
 Behavior
 --------
