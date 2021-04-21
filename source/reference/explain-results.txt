@@ -177,6 +177,29 @@ the :doc:`query optimizer </core/query-plans>`.
       A boolean that specifies whether MongoDB applied an :ref:`index
       filter <index-filters>` for the :term:`query shape`.
 
+   .. data:: explain.queryPlanner.maxIndexedOrSolutionsReached
+
+      A boolean that indicates if the query planner reached the maximum 
+      number of ``OR`` statements as set by 
+      ``internalQueryEnumerationMaxOrSolutions``.
+
+      .. versionadded:: 5.0
+
+   .. data:: explain.queryPlanner.maxIndexedAndSolutionsReached
+
+      A boolean that indicates if the query planner reached the maximum 
+      number of ``AND`` statements as set by 
+      ``internalQueryMaxIntersectPerAnd``.
+
+      .. versionadded:: 5.0
+
+   .. data:: explain.queryPlanner.maxScansToExplodeReached
+
+      A boolean that indicates if the query planner reached the maximum 
+      number of scans as set by ``internalQueryMaxScansToExplode``.
+
+      .. versionadded:: 5.0
+
    .. data:: explain.queryPlanner.queryHash
 
       A hexadecimal string that represents the hash of the
