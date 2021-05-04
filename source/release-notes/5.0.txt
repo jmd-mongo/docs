@@ -171,6 +171,14 @@ Starting in MongoDB 5.0, the :rsconf:`members[n]._id` field may be any
 integer value greater than or equal to ``0``. Previously, this value was
 limited to an integer between ``0`` and ``255`` inclusive.
 
+``enableMajorityReadConcern`` Is Not Configurable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Starting in MongoDB 5.0, 
+:setting:`~replication.enableMajorityReadConcern` cannot be changed 
+and is always set to ``true``. In earlier versions of MongoDB, 
+:setting:`~replication.enableMajorityReadConcern` was configurable.
+
 .. _5.0-rel-notes-security:
 
 Security

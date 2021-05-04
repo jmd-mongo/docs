@@ -26,9 +26,9 @@ for specific workloads. For example, one storage engine might offer
 better performance for read-heavy workloads, and another might support a
 higher throughput for write operations.
 
-.. seealso::
+.. seealso:: 
 
-   :doc:`/core/storage-engines`
+:doc:`/core/storage-engines`
 
 Can you mix storage engines in a replica set?
 ---------------------------------------------

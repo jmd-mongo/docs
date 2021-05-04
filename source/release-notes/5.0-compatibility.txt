@@ -251,6 +251,11 @@ General Changes
 - MongoDB 5.0 removes the ``--serviceExecutor`` command-line option and
   the corresponding ``net.serviceExecutor`` configuration option.
 
+- Starting in MongoDB 5.0, 
+  :setting:`~replication.enableMajorityReadConcern` cannot be changed 
+  and is always set to ``true``. In earlier versions of MongoDB, 
+  :setting:`~replication.enableMajorityReadConcern` was configurable.
+
 Deprecations
 ~~~~~~~~~~~~
 

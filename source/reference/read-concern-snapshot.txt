@@ -41,10 +41,6 @@ the following read operations :
 
 All other read commands prohibit :readconcern:`"snapshot"`.
 
-.. note::
-
-   .. include:: /includes/fact-readConcern-snapshot-disable-majority.rst
-
 Operations
 ----------
 
@@ -70,8 +66,7 @@ transaction involves a shard that has :ref:`disabled read concern
 concern :readconcern:`"snapshot"` for the transaction. You can only use
 read concern :readconcern:`"local"` or :readconcern:`"majority"` for
 the transaction. If you use read concern :readconcern:`"snapshot"`, the
-transaction errors and aborts. For more information, see
-:ref:`transactions-disabled-rc-majority`.
+transaction errors and aborts.
 
 .. _atClusterTime:
 

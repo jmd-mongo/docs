@@ -38,7 +38,7 @@ cluster with a three-member PSA shards.
    .. include:: /includes/extracts/changestream-disable-rc-majority.rst
    
    When upgraded to 4.2 with read concern "majority" disabled, you can
-   use change streams for your deployment.
+   use change stream for your deployment.
 
 For more information, see :ref:`disable-read-concern-majority`.
 
@@ -51,8 +51,8 @@ version 4.0.7.
 
 .. include:: /includes/extracts/changestream-resume-token-versions-4.2-greater.rst
 
-.. important:: When upgrading from MongoDB 4.0.6 or earlier to MongoDB |newversion|
-
+.. admonition:: When upgrading from MongoDB 4.0.6 or earlier to MongoDB |newversion|
+   :class: important
 
    During the upgrade process, a client may try to resume change
    streams using the new ``v1`` resume token when connected to a member
@@ -101,9 +101,11 @@ To ensure that all members of the replica set have
 ``featureCompatibilityVersion`` set to ``4.0``, connect to each
 replica set member and check the ``featureCompatibilityVersion``:
 
+.. cssclass:: copyable-code
+
 .. code-block:: javascript
 
-   db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
+  db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
 
 All members should return a result that includes
 ``"featureCompatibilityVersion" : { "version" : "4.0" }``.
@@ -112,9 +114,11 @@ To set or update ``featureCompatibilityVersion``, run the
 following command on the primary. A majority of the data-bearing
 members must be available:
 
+.. cssclass:: copyable-code
+
 .. code-block:: javascript
 
-   db.adminCommand( { setFeatureCompatibilityVersion: "4.0" } )
+  db.adminCommand( { setFeatureCompatibilityVersion: "4.0" } )
 
 For more information, see
 :dbcommand:`setFeatureCompatibilityVersion`.
@@ -157,7 +161,7 @@ Post Upgrade
 ``TLS`` Options Replace Deprecated ``SSL`` Options
   .. include:: /includes/extracts/4.2-changes-options-tls-ssl-upgrade.rst
 
-4.2+ compatible Drivers Retry Writes by Default
+4.2-Compatible Drivers Retry Writes by Default
   .. include:: /includes/extracts/4.2-changes-drivers-retryWrites-default.rst
 
 Additional Upgrade Procedures
