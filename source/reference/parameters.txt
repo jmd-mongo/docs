@@ -1472,7 +1472,42 @@ General Parameters
 
       mongod --setParameter "tcmallocReleaseRate=5.0"
 
+
+.. parameter:: requireApiVersion
+
+   .. versionadded:: 5.0
+
+   |both|
+
+   *Type*: boolean
+
+   *Default*: ``false``
+
+   If :binary:`~bin.mongod`/:binary:`~bin.mongos` is started 
+   with :parameter:`requireApiVersion` set to ``true``, all command 
+   invocations omitting ``apiVersion`` receive the 
+   :ref:`APIVersionError <api-vers-resp>` response. 
    
+   You may not set :parameter:`requireApiVersion` to ``true`` if your
+   :binary:`~bin.mongod` is a :option:`shard member 
+   <mongod --shardsvr>` or a :option:`config server 
+   <mongod --configsvr>`.
+
+   You can set parameter :parameter:`requireApiVersion` at
+   startup time; for example:
+
+   .. code-block:: bash
+
+      mongod --setParameter requireApiVersion=true
+   
+   During runtime, you can set the :parameter:`requireApiVersion` 
+   parameter with the :dbcommand:`setParameter` command:
+
+   .. code-block:: javascript
+
+      db.adminCommand( { setParameter: 1, requireApiVersion: true } )
+
+
 Logging Parameters
 ~~~~~~~~~~~~~~~~~~
 
