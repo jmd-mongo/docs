@@ -874,6 +874,7 @@ Core Options
          FIPSMode: <boolean>
       compression:
          compressors: <string>
+      initialServiceExecutorThreadingModel: <string>
 
 .. setting:: net.port
 
@@ -1045,6 +1046,19 @@ Core Options
      hostnames that resolve to IPv6 addresses, **or**
    - Set :setting:`net.bindIpAll` to ``true``.
 
+
+.. setting:: net.initialServiceExecutorThreadingModel
+
+   *Type*: string
+
+   *Default*: dedicated
+
+   Determines the initial threading and execution model 
+   :binary:`~bin.mongod` or :binary:`~bin.mongos` uses to execute 
+   client requests. 
+  
+   .. include:: /includes/fact-initialServiceExecutorThreadingModel-values.rst
+   
 
 .. PENDING SERVER-13097
 

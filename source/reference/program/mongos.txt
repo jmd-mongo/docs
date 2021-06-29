@@ -635,6 +635,20 @@ Core Options
    - :doc:`/tutorial/convert-command-line-options-to-yaml`
 
 
+.. option:: --initialServiceExecutorThreadingModel <dedicated|borrowed>
+
+   *Default*: dedicated
+
+   .. versionadded:: 5.0
+   
+   Determines the initial threading and execution model 
+   :program:`mongos` uses to execute client requests. 
+   The ``--initialServiceExecutorThreadingModel`` option accepts the 
+   following values:
+   
+   .. include:: /includes/fact-initialServiceExecutorThreadingModel-values.rst
+
+
 Sharded Cluster Options
 ~~~~~~~~~~~~~~~~~~~~~~~
 

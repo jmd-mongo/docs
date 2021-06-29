@@ -64,6 +64,10 @@ and :binary:`~bin.mongos` command-line options.
      - | :option:`mongod --port`
        | :option:`mongos --port`
 
+   * - :setting:`net.initialServiceExecutorThreadingModel`
+     - | :option:`mongod --initialServiceExecutorThreadingModel`
+       | :option:`mongos --initialServiceExecutorThreadingModel`
+
    * - :setting:`net.tls.allowConnectionsWithoutCertificates`
      - | :option:`mongod --tlsAllowConnectionsWithoutCertificates`
        | :option:`mongos --tlsAllowConnectionsWithoutCertificates`
